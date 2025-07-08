@@ -3,7 +3,7 @@ import React from "react";
 const CreateWebsite = () => {
   return (
     <section id="create-website-section">
-      <div id="main-32" className="w-full bg-slate-200 px-4 md:px-10">
+      <div id="main-32" className="w-full bg-[#f2fefd] px-4 md:px-10">
         <div className="max-w-[1280px] mx-auto flex flex-col  ">
           <div className="flex flex-col gap-3 ">
             <div className="title">

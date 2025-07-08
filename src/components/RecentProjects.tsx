@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function RecentProjects() {
   return (
-    <section id="projects" className="px-4 md:px-10">
+    <section id="projects" className="px-4 md:px-10 ">
       <div className="max-w-[1280px] mx-auto ">
         <div className="flex flex-col">
           <div className="content-title">
