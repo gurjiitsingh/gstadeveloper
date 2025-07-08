@@ -1,21 +1,16 @@
-import posts from "@/data/post.json";
+import posts from '@/data/post.json';
+import { notFound } from 'next/navigation';
 
-interface PostProps {
+type Params = {
   params: {
     slug: string;
   };
-}
+};
 
-export function generateStaticParams() {
-  return posts.map((post: any) => ({
-    slug: post.slug,
-  }));
-}
-
-export default function SinglePostPage({ params }: PostProps) {
+export default function SinglePostPage({ params }:any) {
   const post = posts.find((p: any) => p.slug === params.slug);
 
-  if (!post) return <div className="p-6">Post not found.</div>;
+  if (!post) return notFound();
 
   return (
     <article className="max-w-3xl mx-auto px-4 py-10">
@@ -39,4 +34,11 @@ export default function SinglePostPage({ params }: PostProps) {
       />
     </article>
   );
+}
+
+
+export  function generateStaticParams() {
+  return posts.map((post: any) => ({
+    slug: post.slug,
+  }));
 }
