@@ -10,6 +10,9 @@ const geistSans = Geist({
 
 import { Roboto } from 'next/font/google';
 import "@/css/style.css"
+import Header from "@/components/Header";
+import HeroSection from "@/components/Hero";
+import Footer from "@/components/Footer";
 // const roboto = Roboto({
 //   subsets: ['latin'],
 //   weight: ['400', '700'], // You can choose weights
@@ -47,7 +50,10 @@ export default function RootLayout({
       <body >
         <SiteProvider>
         <BargerMenu />
-        {children}
+         <Header />
+         <HeroSection />
+     {children}
+       <Footer />
         </SiteProvider>
       </body>
     </html>

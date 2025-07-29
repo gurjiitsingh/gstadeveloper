@@ -29,6 +29,13 @@ export default function HeroSection() {
             >
               View Projects
             </Link>
+
+            <Link
+  href="/food-app/#food-app"
+  className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-xl transition"
+>
+  🍔 Food App for Restaurants
+</Link>
           </div>
         </div>
 

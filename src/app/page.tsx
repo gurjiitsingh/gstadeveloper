@@ -39,8 +39,8 @@ export default function Home() {
   return (
     <div className="w-full mx-auto bg-gray-100 text-gray-900">
       {/* Header */}
-   <Header />
-<HeroSection />
+  
+
    
 {/* <Slider /> */}
       {/* Our Services */}
@@ -52,7 +52,7 @@ export default function Home() {
       {/* <Testimonials /> */}
 <RecentProjects />
       {/* Contact Us */}
-      <Footer />
+    
    
     </div>
   );
