@@ -10,6 +10,7 @@ const items = [
   { title: "About", href: "/#about-us" },
   { title: "Services", href: "/#services" },
   { title: "Contact", href: "/#footer" },
+    { title: "Blog", href: "/blog" },
 ];
 
 export default function Header() {

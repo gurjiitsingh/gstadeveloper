@@ -77,6 +77,7 @@ const items = [
   { title: 'About', Icon: BiUser,href:'/#about-us' },
   { title: 'services', Icon: HiOutlineChatBubbleBottomCenterText, href: '/#services' },
   { title: 'Contact', Icon: HiOutlineChatBubbleBottomCenterText, href: '/#contact' },
+    { title: 'Blog', Icon: HiOutlineChatBubbleBottomCenterText, href: '/blog' },
  
 ]
 
