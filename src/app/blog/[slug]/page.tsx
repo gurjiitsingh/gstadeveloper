@@ -2,11 +2,13 @@ import { notFound } from "next/navigation";
 import { posts } from "@/lib/posts";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
-export function generateMetadata({ params }: Props) {
-  const post = posts.find((p) => p.slug === params.slug);
+// ✅ Fix: Make this async and await params
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
+  const post = posts.find((p) => p.slug === slug);
   if (!post) return {};
 
   return {
@@ -16,8 +18,10 @@ export function generateMetadata({ params }: Props) {
   };
 }
 
-export default function BlogArticle({ params }: Props) {
-  const post = posts.find((p) => p.slug === params.slug);
+// ✅ Fix: Make page async and await params
+export default async function BlogArticle({ params }: Props) {
+  const { slug } = await params;
+  const post = posts.find((p) => p.slug === slug);
   if (!post) return notFound();
 
   return (
