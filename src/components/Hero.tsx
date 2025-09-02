@@ -1,21 +1,22 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
     // <section className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-24 px-4 md:px-10">
-        <section className="bg-[#555555] text-white py-24 px-4 md:px-10 my-0">
-      <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between ">
-        
+    <section className="bg-[#555555] text-white py-24 px-4 md:px-10 my-0">
+      <div className="max-w-7xl mx-auto gap-2 flex flex-col-reverse md:flex-row items-center justify-between ">
         {/* Text Content */}
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
-            We Build <span className="text-blue-400">Powerful Web Apps</span> for Your Business
+            We Build <span className="text-blue-400">Powerful Web Apps</span>{" "}
+            for Your Business
           </h1>
           <p className="text-lg text-white mb-8 max-w-xl mx-auto md:mx-0">
-            Gstadeveloper specializes in modern web solutions using Next.js, Tailwind, and the latest technologies to grow your online presence.
+            Gstadeveloper specializes in modern web solutions using Next.js,
+            Tailwind, and the latest technologies to grow your online presence.
           </p>
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
             {/* <Link
@@ -32,16 +33,16 @@ export default function HeroSection() {
             </Link>
 
             <Link
-  href="/food-app/#food-app"
-  className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-xl transition"
->
-  🍔 Food App for Restaurants
-</Link>
+              href="/food-app/#food-app"
+              className="bg-[#fb8410] hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-xl transition"
+            >
+              🍔 Food App for Restaurants
+            </Link>
           </div>
         </div>
 
         {/* Hero Image */}
-        <div className="flex-1 -mt-6">
+        <div className="flex-1 -mt-6 ">
           <Image
             src="/hero-2.jpg"
             alt="Developer working on a project"

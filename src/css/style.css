@@ -51,7 +51,7 @@
   
   .p1, .color-primary {
     background-color: #21053b;
-    background-color: #43daad !important;
+    background-color: #555555 !important;
   }
   
   .s1, .color-secondery {
@@ -473,13 +473,7 @@
   /*=======================================
               Services styles
   =========================================*/
-  #services {
-    margin-bottom: 5%;
-  }
-  
-  .service-area {
-    margin-top: 30px;
-  }
+
   
   
   /*
@@ -1357,16 +1351,12 @@
   padding: 5.8rem 0;
   border-top: 1px solid #eee;
 
-  background-color: #21053b;
-  background-color: #E25F52;
-  background-color: #43daad;
-  background-color: #08A890;
 
 }
 
 .footer-color {
   color: #938E93;
-  color: #fff !important;
+  color: #fe7a0a !important;
 
 }
 
@@ -1411,7 +1401,7 @@
 }
 
 p.footer-heading {
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
   font-family: 'Days One', sans-serif !important;

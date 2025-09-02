@@ -6,7 +6,7 @@ import {
   
   export default function Footer() {
     return (
-      <footer className="footer p1 bg-amber-300 " id="footer">
+      <footer className="footer bg-[#555555]  " id="footer">
         <div className="max-w-[1280px] px-4 md:px-10 mx-auto grid--footer">
           <div className="logo-col">
             <a href="#" className="footer-logo">
@@ -21,7 +21,7 @@ import {
             <ul className="social-links">
               <li>
                 <a className="footer-link" href="#">
-                  <IoLogoInstagram className="social-icon" />
+                  <IoLogoInstagram className="social-icon " />
                 </a>
               </li>
               <li>
