@@ -13,6 +13,7 @@ import "@/css/style.css"
 import Header from "@/components/Header";
 import HeroSection from "@/components/Hero";
 import Footer from "@/components/Footer";
+import ContactModal from "@/components/ContactModal";
 // const roboto = Roboto({
 //   subsets: ['latin'],
 //   weight: ['400', '700'], // You can choose weights
@@ -57,6 +58,7 @@ export default function RootLayout({
      {children}
      </div>
        <Footer />
+       <ContactModal />
        </div>
         </SiteProvider>
       </body>

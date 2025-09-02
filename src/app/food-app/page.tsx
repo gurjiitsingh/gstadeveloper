@@ -39,6 +39,8 @@ import {
 } from "react-icons/fi";
 import Image from "next/image";
 import { FaArrowTrendUp } from "react-icons/fa6";
+import { UseSiteContext } from "@/SiteContext/SiteContext";
+import ContactButton from "@/components/ContactButton";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -48,7 +50,7 @@ const poppins = Poppins({
 export default function FoodAppLandingPage() {
   const featuredIds = [1, 2, 3, 4]; // replace with the IDs you want to display
   const featuredPosts = posts.filter((post) => featuredIds.includes(post.id));
-
+ const { toggleContactForm } = UseSiteContext();
   return (
     <main className="min-h-screen ">
       <section
@@ -112,12 +114,7 @@ export default function FoodAppLandingPage() {
               >
                 Try Live Demo <FiArrowRight className="text-xl" />
               </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-[#aaabab] hover:bg-[#5f6161] text-white px-6 py-3 rounded-full text-lg font-medium transition"
-              >
-                <FiMail className="text-xl" /> Contact Us
-              </Link>
+         <ContactButton />
             </div>
           </div>
 
@@ -202,12 +199,7 @@ export default function FoodAppLandingPage() {
               >
                 <FaPlay className="text-white" /> Try Live Demo
               </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-[#aaabab] hover:bg-[#5f6161] text-white px-6 py-3 rounded-full text-lg shadow-md transition"
-              >
-                <FaEnvelope className="text-white" /> Contact Us
-              </Link>
+            <ContactButton />
             </div>
             {/* <div className="flex flex-wrap gap-4 pt-6">
             <Link
@@ -275,12 +267,7 @@ export default function FoodAppLandingPage() {
               >
                 <FaPlay className="text-white" /> Try Live Demo
               </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-[#aaabab] hover:bg-[#5f6161] text-white px-6 py-3 rounded-full text-lg shadow-md transition"
-              >
-                <FaEnvelope className="text-white" /> Contact Us
-              </Link>
+             <ContactButton />
             </div>
           </div>
 
@@ -352,12 +339,7 @@ export default function FoodAppLandingPage() {
               >
                 <FaPlay className="text-white" /> Try Live Demo
               </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-[#aaabab] hover:bg-[#5f6161] text-white px-6 py-3 rounded-full text-lg shadow-md transition"
-              >
-                <FaEnvelope className="text-white" /> Contact Us
-              </Link>
+           <ContactButton />
             </div>
           </div>
         </div>
@@ -409,12 +391,7 @@ export default function FoodAppLandingPage() {
               >
                 <FaPlay className="text-white" /> Try Live Demo
               </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-[#aaabab] hover:bg-[#5f6161] text-white px-6 py-3 rounded-full text-lg shadow-md transition"
-              >
-                <FaEnvelope className="text-white" /> Contact Us
-              </Link>
+            <ContactButton />
             </div>
           </div>
           {/* Left Side: Image */}
@@ -535,12 +512,11 @@ export default function FoodAppLandingPage() {
         >
           Try Live Demo <FiArrowRight className="text-xl" />
         </Link>
-        <Link
-          href="/contact"
-          className="inline-flex items-center gap-2 bg-[#aaabab] hover:bg-[#5f6161] text-white px-6 py-3 rounded-full text-lg font-medium transition"
-        >
-          <FiMail className="text-xl" /> Contact Us
-        </Link>
+      
+<ContactButton />
+
+        
+      
       </div>
     </div>
   </div>

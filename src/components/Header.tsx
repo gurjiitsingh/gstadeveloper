@@ -4,6 +4,9 @@ import React from "react";
 import { FaBars } from "react-icons/fa";
 import { UseSiteContext } from "@/SiteContext/SiteContext";
 import Image from "next/image";
+import { menuItems } from "@/confing/menuItems";
+import ContactButton from "./ContactButton";
+import Link from "next/link";
 
 const items = [
   { title: "Home", href: "/#home" },
@@ -21,6 +24,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto py-3 px-6 flex items-center justify-between">
         {/* Logo with background so white logo is visible */}
         <div className=" p-2 rounded">
+          <Link href={"/"}>
           <Image
             src="/logo.png"
             alt="Logo"
@@ -29,11 +33,12 @@ export default function Header() {
             className="object-contain h-8 w-auto"
             priority
           />
+          </Link>
         </div>
 
         {/* Navigation */}
         <nav className="hidden lg:flex items-center space-x-6">
-          {items.map(({ title, href }) => (
+          {menuItems.map(({ title, href }) => (
             <a
               key={title}
               href={href}
@@ -43,6 +48,7 @@ export default function Header() {
               {title}
             </a>
           ))}
+            <ContactButton />
         </nav>
 
         {/* Mobile Burger */}
@@ -53,6 +59,7 @@ export default function Header() {
         >
           <FaBars size={28} />
         </button>
+      
       </div>
     </header>
   );
