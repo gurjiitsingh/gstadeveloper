@@ -159,7 +159,7 @@ export default function FoodAppLandingPage() {
           {/* Right side: Content */}
           <div className="space-y-6">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 leading-snug">
-              Why Choose Our Web App?
+              Why Choose Our<span className="text-[#e4af67]"> web app </span> ?
             </h2>
 
             <p className="text-lg md:text-xl text-gray-600">
@@ -237,7 +237,7 @@ export default function FoodAppLandingPage() {
 
           <div className="space-y-6">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800">
-              Boost Sales with Smart Discounts
+              Boost Sales with <span className="text-[#1676aa]">Smart Discounts</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-600">
               Our food ordering web app comes with built-in discount options,
@@ -300,7 +300,7 @@ export default function FoodAppLandingPage() {
           {/* Left Side: Image */}
           <div className="flex justify-center relative">
             <img
-              src="/order-management-e.jpg"
+              src="/order-managemnet-2.jpg"
               alt="Food Ordering App Preview"
               className="rounded-xl shadow-lg w-full max-w-md md:max-w-lg"
             />
@@ -310,7 +310,7 @@ export default function FoodAppLandingPage() {
           <div className="space-y-6 text-center md:text-left">
             <h2 className="text-4xl md:text-5xl font-extrabold">
               {/* <span className="text-red-600">Real Time</span> Order Alerts */}
-              <span className="text-red-600">Smart Order</span> Management for
+              <span className="text-[#d2572e]">Smart Order</span> Management for
               Restaurants
             </h2>
             <p className="text-lg text-gray-700">
@@ -344,19 +344,19 @@ export default function FoodAppLandingPage() {
             </ul>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center md:justify-start">
+               <div className="flex gap-4 mt-6">
               <Link
                 href="https://food.it10x.com/"
                 target="_blank"
-                className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full text-lg font-medium transition"
+                className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-900 text-white px-6 py-3 rounded-full text-lg shadow-md transition"
               >
-                Try Live Demo <FiArrowRight className="text-xl" />
+                <FaPlay className="text-white" /> Try Live Demo
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-[#aaabab] hover:bg-[#5f6161] text-white px-6 py-3 rounded-full text-lg font-medium transition"
+                className="inline-flex items-center gap-2 bg-[#aaabab] hover:bg-[#5f6161] text-white px-6 py-3 rounded-full text-lg shadow-md transition"
               >
-                <FiMail className="text-xl" /> Contact Us
+                <FaEnvelope className="text-white" /> Contact Us
               </Link>
             </div>
           </div>
@@ -476,42 +476,76 @@ export default function FoodAppLandingPage() {
         </div>
       </section> */}
 
-      <section className="bg-gradient-to-b from-[#fdfcfb] via-[#f7f4f1] to-[#ece3da] text-neutral-800">
-        <div className="max-w-6xl mx-auto px-4 md:px-10 py-12">
-          {/* <h2 className="text-4xl md:text-5xl font-bold text-center text-slate-800 mb-12">
-          Latest Articles
-        </h2> */}
+   
+<section id="web-food-app" className="bg-[#faeee2] text-neutral-900">
+  <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid md:grid-cols-2 gap-12 items-center">
+    {/* Left Side: Image */}
+    <div className="flex justify-center relative">
+    <Image
+        src="/food-ordering-app-2.jpg"
+        alt="Restaurant Online Food Ordering App"
+        width={600}
+        height={400}
+        className="rounded-xl shadow-lg w-full max-w-md md:max-w-lg"
+        priority
+      />
+    </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {featuredPosts.map((post) => (
-              <div
-                key={post.id}
-                className="p-6 rounded-2xl shadow-md hover:shadow-lg transition bg-white dark:bg-zinc-900 flex flex-col justify-between"
+    {/* Right Side: Text Content */}
+    <div className="space-y-6 text-center md:text-left">
+      <h2 className="text-4xl md:text-5xl font-extrabold">
+        Why         {/* Your Restaurant  */}          Need 
+        {/* Its */}
+         <span className="text-[#e2c07c]"> Own Online </span>Food Ordering Web App
+      </h2>
+      <p className="text-lg text-gray-700">
+        Stop losing margins to third-party marketplaces. Take back control of your 
+        customer data, brand, and profits with your own online ordering system.
+      </p>
+      <p className="text-lg text-gray-700 max-w-xl mx-auto md:mx-0">
+        With a Next.js powered web app, you get speed, SEO benefits, and full ownership of 
+        your platform—without the restrictions of Android/iOS marketplaces or WordPress plugins.
+      </p>
+
+      {/* Feature List */}
+      <ul className="grid gap-3">
+        {featuredPosts.map((post) => (
+          <li
+            key={post.id}
+            className="flex items-center gap-3 bg-white/80 shadow-sm rounded-lg px-4 py-2"
+          >
+            <div>
+              <Link
+                href={`/blog/${post.slug}`}
+                className="text-sm hover:underline pl-1"
               >
-                <div>
-                  <h3 className="text-2xl font-semibold text-slate-800 dark:text-white">
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      className="text-[#00897b] hover:underline"
-                    >
-                      {post.title}
-                    </Link>
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400 mt-3">
-                    {post.metadata.description}
-                  </p>
-                </div>
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="inline-flex items-center gap-2 mt-6 text-[#00897b] font-medium hover:underline"
-                >
-                  Read more <FaArrowRight className="text-sm" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                {post.title}
+              </Link>
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      {/* Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center md:justify-start">
+        <Link
+          href="https://food.it10x.com/"
+          target="_blank"
+          className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full text-lg font-medium transition"
+        >
+          Try Live Demo <FiArrowRight className="text-xl" />
+        </Link>
+        <Link
+          href="/contact"
+          className="inline-flex items-center gap-2 bg-[#aaabab] hover:bg-[#5f6161] text-white px-6 py-3 rounded-full text-lg font-medium transition"
+        >
+          <FiMail className="text-xl" /> Contact Us
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
+
     </main>
   );
 }

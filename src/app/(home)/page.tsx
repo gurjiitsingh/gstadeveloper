@@ -35,7 +35,7 @@ export default function Home() {
  
 
   return (
-    <div className="w-full mx-auto bg-gray-100 text-gray-900">
+    <div className="w-full mx-auto flex flex-col gap-0 my-0 py-0 text-gray-900 ">
       {/* Header */}
 
    

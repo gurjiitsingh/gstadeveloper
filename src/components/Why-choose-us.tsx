@@ -2,7 +2,7 @@
 
 export default function WhyChooseUs() {
   return (
-    <section id="features-2" className="">
+    <section id="" className="bg-gradient-to-b from-[#fdfcfb] via-[#f7f4f1] to-[#ece3da] text-neutral-800">
       <div className="w-full px-4 md:px-10">
       <div className="max-w-[1280px] mx-auto  block  my-10">
         <div className="w-full">

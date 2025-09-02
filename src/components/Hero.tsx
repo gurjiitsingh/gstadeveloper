@@ -6,8 +6,8 @@ import Link from 'next/link';
 export default function HeroSection() {
   return (
     // <section className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-24 px-4 md:px-10">
-        <section className="bg-[#555555] text-white py-24 px-4 md:px-10">
-      <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+        <section className="bg-[#555555] text-white py-24 px-4 md:px-10 my-0">
+      <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between ">
         
         {/* Text Content */}
         <div className="flex-1 text-center md:text-left">

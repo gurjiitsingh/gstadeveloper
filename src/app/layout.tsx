@@ -50,10 +50,14 @@ export default function RootLayout({
       <body >
         <SiteProvider>
         <BargerMenu />
+        <div className="flex flex-col gap-0 my-0">
          <Header />
          <HeroSection />
+         <div className="my-0 py-0">
      {children}
+     </div>
        <Footer />
+       </div>
         </SiteProvider>
       </body>
     </html>
