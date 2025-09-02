@@ -1,9 +1,15 @@
 "use client";
 
 import { UseSiteContext } from "@/SiteContext/SiteContext";
+import dynamic from "next/dynamic";
 import { useState, useRef } from "react";
 
-import ReCAPTCHA from "react-google-recaptcha";
+
+
+//import ReCAPTCHA from "react-google-recaptcha";
+const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), {
+  ssr: false,
+});
 
 const countries = ["India", "Germany", "USA", "UK"];
 
@@ -17,8 +23,8 @@ export default function ContactModal() {
     message: "",
   });
 
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
-
+  //const recaptchaRef = useRef<ReCAPTCHAProps>(null);
+const recaptchaRef = useRef<any>(null);
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -28,6 +34,32 @@ export default function ContactModal() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const token = recaptchaRef.current?.getValue();
+    if (!token) {
+      alert("Please complete the reCAPTCHA.");
+      return;
+    }
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...form, token }),
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      alert("Message sent successfully!");
+      setForm({ name: "", email: "", country: "", phone: "", message: "" });
+      recaptchaRef.current?.reset();
+      toggleContactForm(false);
+    } else {
+      alert("reCAPTCHA failed, please try again.");
+    }
+  };
+
+  const handleSubmit1 = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const token = recaptchaRef.current?.getValue();
