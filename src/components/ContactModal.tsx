@@ -1,17 +1,16 @@
 "use client";
 
 import { UseSiteContext } from "@/SiteContext/SiteContext";
-import dynamic from "next/dynamic";
 import { useState, useRef } from "react";
-
-
-
-//import ReCAPTCHA from "react-google-recaptcha";
-const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), {
-  ssr: false,
-});
+import dynamic from "next/dynamic";
+import type ReCAPTCHAType from "react-google-recaptcha"; // 👈 import the type
 
 const countries = ["India", "Germany", "USA", "UK"];
+
+// Load dynamically (client-side only)
+const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), {
+  ssr: false,
+}) as unknown as typeof ReCAPTCHAType;
 
 export default function ContactModal() {
   const { openContactForm, toggleContactForm } = UseSiteContext();
@@ -23,8 +22,9 @@ export default function ContactModal() {
     message: "",
   });
 
-  //const recaptchaRef = useRef<ReCAPTCHAProps>(null);
-const recaptchaRef = useRef<any>(null);
+  // 👇 Correct type usage
+  const recaptchaRef = useRef<ReCAPTCHAType>(null);
+
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -59,38 +59,11 @@ const recaptchaRef = useRef<any>(null);
     }
   };
 
-  const handleSubmit1 = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    const token = recaptchaRef.current?.getValue();
-    if (!token) {
-      alert("Please complete the reCAPTCHA.");
-      return;
-    }
-
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...form, token }),
-    });
-
-    const data = await res.json();
-    if (data.success) {
-      alert("Message sent successfully!");
-      setForm({ name: "", email: "", country: "", phone: "", message: "" });
-      recaptchaRef.current?.reset();
-      toggleContactForm(false); // close after success
-    } else {
-      alert("reCAPTCHA failed, please try again.");
-    }
-  };
-
-  if (!openContactForm) return null; // modal closed
+  if (!openContactForm) return null;
 
   return (
     <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
       <div className="bg-[#333] rounded-xl w-full max-w-2xl mx-4 relative">
-        {/* Close Button */}
         <button
           onClick={() => toggleContactForm(false)}
           className="absolute top-3 right-3 text-white text-lg font-bold"
@@ -98,7 +71,6 @@ const recaptchaRef = useRef<any>(null);
           ✕
         </button>
 
-        {/* Form content (unchanged) */}
         <section id="contact-us" className="py-12">
           <div className="max-w-3xl mx-auto px-6">
             <h2 className="text-3xl font-bold text-white text-center mb-6">
@@ -110,7 +82,7 @@ const recaptchaRef = useRef<any>(null);
               onSubmit={handleSubmit}
               className="bg-[#222] p-6 rounded-xl shadow-lg space-y-4"
             >
-              <input
+                 <input
                 type="text"
                 name="name"
                 placeholder="Your name"
