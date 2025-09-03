@@ -44,7 +44,7 @@ export default function HeroSection() {
         {/* Hero Image */}
         <div className="flex-1 -mt-6 ">
           <Image
-            src="/hero-3.jpg"
+            src="/hero-2.jpg"
             alt="Developer working on a project"
             width={600}
             height={400}
