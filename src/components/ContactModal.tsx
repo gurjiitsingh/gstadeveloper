@@ -3,16 +3,14 @@
 import { UseSiteContext } from "@/SiteContext/SiteContext";
 import { useState, useRef, useEffect } from "react";
 import dynamic from "next/dynamic";
-import type ReCAPTCHAType from "react-google-recaptcha";
+import type ReCAPTCHAType from "react-google-recaptcha"; // ✅ type only
 
-// --- Dynamic Import with forwardRef ---
-const ReCAPTCHA = dynamic(
-  () => import("react-google-recaptcha"),
-  { ssr: false }
-) as unknown as React.ForwardRefExoticComponent<
-  React.ComponentPropsWithoutRef<typeof ReCAPTCHAType> &
-  React.RefAttributes<ReCAPTCHAType>
->;
+const countries = ["India", "Germany", "USA", "UK"];
+
+// ✅ load dynamically (client-side only)
+const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), {
+  ssr: false,
+});
 
 export default function ContactModal() {
   const { openContactForm, toggleContactForm } = UseSiteContext();
@@ -25,15 +23,20 @@ export default function ContactModal() {
   });
 
   const recaptchaRef = useRef<ReCAPTCHAType>(null);
-  const [isClient, setIsClient] = useState(false);
 
-  useEffect(() => setIsClient(true), []);
+  // ✅ ensures no hydration mismatch
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
-  ) => setForm({ ...form, [e.target.name]: e.target.value });
+  ) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -84,8 +87,63 @@ export default function ContactModal() {
               onSubmit={handleSubmit}
               className="bg-[#222] p-6 rounded-xl shadow-lg space-y-4"
             >
-              {/* inputs here... */}
+              <input
+                type="text"
+                name="name"
+                placeholder="Your name"
+                value={form.name}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 bg-transparent border border-white text-white placeholder-gray-300 text-base rounded focus:outline-none focus:ring-2 focus:ring-[#0BD3B5]"
+              />
 
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email Address"
+                value={form.email}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 bg-transparent border border-white text-white placeholder-gray-300 text-base rounded focus:outline-none focus:ring-2 focus:ring-[#0BD3B5]"
+              />
+
+              <select
+                name="country"
+                value={form.country}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 bg-transparent border border-white text-white text-base rounded focus:outline-none focus:ring-2 focus:ring-[#0BD3B5]"
+              >
+                <option value="" disabled className="bg-[#222] text-gray-300">
+                  Select your country
+                </option>
+                {countries.map((c) => (
+                  <option key={c} value={c} className="bg-[#222] text-white">
+                    {c}
+                  </option>
+                ))}
+              </select>
+
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your Phone Number (optional)"
+                value={form.phone}
+                onChange={handleChange}
+                className="w-full px-4 py-2 bg-transparent border border-white text-white placeholder-gray-300 text-base rounded focus:outline-none focus:ring-2 focus:ring-[#0BD3B5]"
+              />
+
+              <textarea
+                name="message"
+                placeholder="Your message here..."
+                value={form.message}
+                onChange={handleChange}
+                required
+                rows={4}
+                className="w-full px-4 py-2 bg-transparent border border-white text-white placeholder-gray-300 text-base rounded focus:outline-none focus:ring-2 focus:ring-[#0BD3B5]"
+              />
+
+              {/* ✅ render ReCAPTCHA only on client */}
               {isClient && (
                 <ReCAPTCHA
                   ref={recaptchaRef}
