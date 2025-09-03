@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { IoClose } from "react-icons/io5";
 import { UseSiteContext } from '@/SiteContext/SiteContext';
 import { menuItems } from '@/confing/menuItems';
+import ContactButtonMini from '../ContactButtonMini';
 
 
 export const BargerMenu = () => {
@@ -24,7 +25,7 @@ export const BargerMenu = () => {
 
             <motion.div
               {...framerMenuPanel}
-              className="fixed mx-auto right-5 left-5 rounded-b-3xl top-0 px-6 pt-12 pb-3 z-50 bg-[#133C72]"
+              className="fixed mx-auto right-5 left-5 rounded-b-3xl top-0 px-6 pt-20 pb-3 z-50 bg-[#133C72]"
               ref={ref}
               aria-label="Menu"
             >
@@ -61,6 +62,7 @@ export const BargerMenu = () => {
                     </li>
                   );
                 })}
+                <li key="xyzoo" className='py-2'><div className='my-3'><ContactButtonMini /></div></li>
               </ul>
             </motion.div>
           </>

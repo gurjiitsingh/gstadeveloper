@@ -60,7 +60,7 @@ export default function FoodAppLandingPage() {
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid md:grid-cols-2 gap-12 items-center">
           {/* Left Side: Text + Features */}
-          <div className="space-y-6 text-center md:text-left">
+          <div className="space-y-6 text-center order-2 md:text-left">
             <h2 className="text-4xl md:text-5xl font-extrabold text-slate-800">
               Food Ordering <span className="text-[#d8a97c]">Web App</span> for
               Restaurants
@@ -130,9 +130,9 @@ export default function FoodAppLandingPage() {
         </div>
 
         {/* Footer Note */}
-        <div className="max-w-6xl mx-auto mt-12 border-t pt-6 text-sm text-gray-500 text-center">
+        <div className="max-w-6xl mx-auto mt-12   border-t py-6 text-sm text-gray-500 text-center">
           <p>
-            Also included: Setup + 1 Month Support, Admin Access Panel, Basic
+            Also included: Setup + 1 Month Support, Basic
             Logo & Color Customization
           </p>
         </div>
@@ -167,32 +167,32 @@ export default function FoodAppLandingPage() {
             </p>
 
             {/* Features List */}
-            <ul className="space-y-4 text-base text-slate-700">
+            <ul className="space-y-4 text-base text-slate-700 flex flex-col gap-1">
               <li className="flex items-center gap-3 bg-white/60 backdrop-blur-sm p-3 rounded-xl shadow-sm">
-                <FaRocket className="text-slate-700" /> Built with Next.js for
+                <FaRocket className="text-slate-700 ml-1" /> Built with Next.js for
                 lightning speed
               </li>
               <li className="flex items-center gap-3 bg-white/60 backdrop-blur-sm p-3 rounded-xl shadow-sm">
-                <FaCloud className="text-slate-700" /> Cloud database for
+                <FaCloud className="text-slate-700 ml-1" /> Cloud database for
                 security & scalability
               </li>
               <li className="flex items-center gap-3 bg-white/60 backdrop-blur-sm p-3 rounded-xl shadow-sm">
-                <FaShieldAlt className="text-slate-700" /> Secure &
+                <FaShieldAlt className="text-slate-700 ml-1" /> Secure &
                 commission-free ordering
               </li>
               <li className="flex items-center gap-3 bg-white/60 backdrop-blur-sm p-3 rounded-xl shadow-sm">
-                <FaCogs className="text-slate-700" /> Customizable UI to match
+                <FaCogs className="text-slate-700 ml-1" /> Customizable UI to match
                 your brand
               </li>
               <li className="flex items-center gap-3 bg-white/60 backdrop-blur-sm p-3 rounded-xl shadow-sm">
-                <FaUserFriends className="text-slate-700" /> Easy-to-use for
+                <FaUserFriends className="text-slate-700 ml-1" /> Easy-to-use for
                 staff & customers
               </li>
             </ul>
 
             {/* CTA Buttons */}
 
-            <div className="flex gap-4 mt-6">
+            <div className="flex flex-col sm:flex-row gap-4 mt-6">
               <Link
                 href="https://food.it10x.com/"
                 target="_blank"
@@ -226,10 +226,19 @@ export default function FoodAppLandingPage() {
         className="bg-gradient-to-b from-[#fdfcfb] via-[#f7f4f1] to-[#ece3da] text-neutral-800"
       >
         <div className="max-w-7xl mx-auto px-4 md:px-10 py-12 grid md:grid-cols-2 gap-10 items-center">
+         
+          {/* Right Side: Content */}
+          <div className="flex justify-center md:order-2">
+            <img
+              src="/discounts-setup.jpg" // replace with your actual image
+              alt="Discounts and Offers"
+              className="rounded-2xl shadow-xl w-full max-w-md md:max-w-lg"
+            />
+          </div>
+         
           {/* Left Side: Image */}
-
-          <div className="space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-800">
+          <div className="space-y-6  ">
+            <h2 className="text-4xl  md:text-5xl font-bold text-slate-800">
               Boost Sales with <span className="text-[#1676aa]">Smart Discounts</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-600">
@@ -260,7 +269,7 @@ export default function FoodAppLandingPage() {
               </li>
             </ul>
 
-            <div className="flex gap-4 mt-6">
+            <div className="flex flex-col   sm:flex-row gap-4 mt-6">
               <Link
                 href="https://food.it10x.com/"
                 target="_blank"
@@ -272,14 +281,7 @@ export default function FoodAppLandingPage() {
             </div>
           </div>
 
-          {/* Right Side: Content */}
-          <div className="flex justify-center">
-            <img
-              src="/discounts-setup.jpg" // replace with your actual image
-              alt="Discounts and Offers"
-              className="rounded-2xl shadow-xl w-full max-w-md md:max-w-lg"
-            />
-          </div>
+         
         </div>
       </section>
 
@@ -332,7 +334,7 @@ export default function FoodAppLandingPage() {
             </ul>
 
             {/* Buttons */}
-               <div className="flex gap-4 mt-6">
+               <div className="flex flex-col sm:flex-row gap-4 mt-6">
               <Link
                 href="https://food.it10x.com/"
                 target="_blank"
@@ -351,6 +353,16 @@ export default function FoodAppLandingPage() {
         className="bg-gradient-to-b from-[#fdfcfb] via-[#f7f4f1] to-[#ece3da] text-neutral-800"
       >
         <div className="max-w-7xl mx-auto px-4 md:px-10 py-16 grid md:grid-cols-2 gap-12 items-center">
+        
+         {/* Left Side: Image */}
+          <div className="flex justify-center md:order-2">
+            <img
+              src="/responsive.jpg"
+              alt="Responsive Food Ordering App"
+              className="rounded-2xl shadow-xl w-full max-w-md md:max-w-lg"
+            />
+          </div>
+        
           {/* Right Side: Text Content */}
           <div className="space-y-6 text-center md:text-left">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 leading-snug">
@@ -364,27 +376,27 @@ export default function FoodAppLandingPage() {
             </p>
 
             {/* Feature List */}
-            <ul className="space-y-4 text-base text-slate-700">
+            <ul className="space-y-4 text-base text-slate-700 flex flex-col gap-1">
               <li className="flex items-center gap-3 bg-white/70 backdrop-blur-sm p-3 rounded-xl shadow-sm">
-                <FiSmartphone className="text-green-600 text-xl" />
+                <FiSmartphone className="text-green-600 text-xl ml-1" />
                 Optimized for mobile-first experience
               </li>
               <li className="flex items-center gap-3 bg-white/70 backdrop-blur-sm p-3 rounded-xl shadow-sm">
-                <FiMonitor className="text-green-600 text-xl" />
+                <FiMonitor className="text-green-600 text-xl ml-1" />
                 Perfectly scaled for tablets & desktops
               </li>
               <li className="flex items-center gap-3 bg-white/70 backdrop-blur-sm p-3 rounded-xl shadow-sm">
-                <FiLayout className="text-green-600 text-xl" />
+                <FiLayout className="text-green-600 text-xl ml-1" />
                 Clean, modern, user-friendly design
               </li>
               <li className="flex items-center gap-3 bg-white/70 backdrop-blur-sm p-3 rounded-xl shadow-sm">
-                <FiGrid className="text-green-600 text-xl" />
+                <FiGrid className="text-green-600 text-xl ml-1" />
                 Consistent look across all devices
               </li>
             </ul>
 
             {/* CTA Buttons */}
-            <div className="flex gap-4 mt-6">
+            <div className="flex flex-col sm:flex-row gap-4 mt-6">
               <Link
                 href="https://food.it10x.com/"
                 target="_blank"
@@ -395,14 +407,7 @@ export default function FoodAppLandingPage() {
             <ContactButton />
             </div>
           </div>
-          {/* Left Side: Image */}
-          <div className="flex justify-center">
-            <img
-              src="/responsive.jpg"
-              alt="Responsive Food Ordering App"
-              className="rounded-2xl shadow-xl w-full max-w-md md:max-w-lg"
-            />
-          </div>
+         
         </div>
       </section>
 
@@ -522,7 +527,7 @@ export default function FoodAppLandingPage() {
     </div>
   </div>
 </section>
-  <ContactModal />
+
     </main>
   );
 }

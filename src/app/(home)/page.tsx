@@ -51,7 +51,7 @@ export default function Home() {
 <RecentProjects />
       {/* Contact Us */}
      
-     <ContactModal />
+    
     </div>
   );
 }

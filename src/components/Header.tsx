@@ -5,16 +5,9 @@ import { FaBars } from "react-icons/fa";
 import { UseSiteContext } from "@/SiteContext/SiteContext";
 import Image from "next/image";
 import { menuItems } from "@/confing/menuItems";
-import ContactButton from "./ContactButton";
 import Link from "next/link";
+import ContactButtonMini from "./ContactButtonMini";
 
-const items = [
-  { title: "Home", href: "/#home" },
-  { title: "About", href: "/#about-us" },
-  { title: "Services", href: "/#services" },
-  { title: "Contact", href: "/#footer" },
-    { title: "Blog", href: "/blog" },
-];
 
 export default function Header() {
   const { bargerMenuToggle } = UseSiteContext();
@@ -48,7 +41,7 @@ export default function Header() {
               {title}
             </a>
           ))}
-            <ContactButton />
+            <ContactButtonMini />
         </nav>
 
         {/* Mobile Burger */}

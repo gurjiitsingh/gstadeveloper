@@ -1,5 +1,6 @@
 import React from "react";
 import { FiPhoneCall, FiDollarSign, FiCheckCircle } from "react-icons/fi";
+import ContactButton from "./ContactButton";
 
 const CreateWebsite = () => {
   return (
@@ -76,15 +77,20 @@ const CreateWebsite = () => {
               <span className="text-sm font-bold text-slate-500">Step 3</span>
             </div>
           </div>
+         
         </div>
 
         {/* Right Side: Image */}
-        <div className="flex justify-center">
+        <div className="flex flex-col gap-2 justify-center">
+         <div className="flex w-full h-full  border-r-12 border-slate-50">
           <img
             src="/how-create-your-web-app.jpg"
             alt="Website Creation Process"
-            className="rounded-2xl shadow-xl w-full max-w-md md:max-w-lg"
+            className="rounded-2xl shadow-xl w-full max-w-md md:max-w-lg "
           />
+          
+          </div>
+            <ContactButton />
         </div>
       </div>
     </section>
