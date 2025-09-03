@@ -1,16 +1,21 @@
 "use client";
 
 import { UseSiteContext } from "@/SiteContext/SiteContext";
-import { useState, useRef, useEffect } from "react";
 import dynamic from "next/dynamic";
-import type ReCAPTCHAType from "react-google-recaptcha"; // ✅ type only
+import { useState, useRef, useEffect } from "react";
 
 const countries = ["India", "Germany", "USA", "UK"];
 
 // ✅ load dynamically (client-side only)
+import type ReCAPTCHAType from "react-google-recaptcha";
+
+// ✅ dynamic import but cast to forwardRef component
 const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), {
   ssr: false,
-});
+}) as unknown as React.ForwardRefExoticComponent<
+  React.ComponentPropsWithoutRef<typeof ReCAPTCHAType> &
+    React.RefAttributes<ReCAPTCHAType>
+>;
 
 export default function ContactModal() {
   const { openContactForm, toggleContactForm } = UseSiteContext();
