@@ -58,7 +58,7 @@ export default function RootLayout({
      {children}
      </div>
        <Footer />
-       <ContactModal />
+     
        </div>
         </SiteProvider>
       </body>

@@ -18,6 +18,7 @@ import WhyChooseUs from "@/components/Why-choose-us";
 import Slider from "@/components/Slider";
 import Testimonials from "@/components/Testimonials";
 import RecentProjects from "@/components/RecentProjects";
+import ContactModal from "@/components/ContactModal";
 
 //import { usePathname } from "next/navigation";
 // import { Carousel } from "react-responsive-carousel";
@@ -50,7 +51,7 @@ export default function Home() {
 <RecentProjects />
       {/* Contact Us */}
      
-   
+     <ContactModal />
     </div>
   );
 }

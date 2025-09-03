@@ -41,6 +41,7 @@ import Image from "next/image";
 import { FaArrowTrendUp } from "react-icons/fa6";
 import { UseSiteContext } from "@/SiteContext/SiteContext";
 import ContactButton from "@/components/ContactButton";
+import ContactModal from "@/components/ContactModal";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -521,7 +522,7 @@ export default function FoodAppLandingPage() {
     </div>
   </div>
 </section>
-
+  <ContactModal />
     </main>
   );
 }
