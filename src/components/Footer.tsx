@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
     IoLogoInstagram,
     IoLogoFacebook,
@@ -89,9 +90,14 @@ import {
             <p className="footer-heading footer-color">Explore</p>
             <ul className="footer-nav">
               <li>
-                <a className="footer-link" href="https://gstadeveloper.com/">
+                <Link className="footer-link" href="/">
                   Home
-                </a>
+                </Link>
+              </li>
+               <li>
+                <Link className="footer-link" href="/contact-us">
+                  Contact Us
+                </Link>
               </li>
               <li>
                 <a className="footer-link" href="https://gstadeveloper.com/">

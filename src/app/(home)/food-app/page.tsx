@@ -109,7 +109,7 @@ export default function FoodAppLandingPage() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center md:justify-start">
               <Link
-                href="https://food.it10x.com/"
+                href="/demo-link/#demo"
                 target="_blank"
                 className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-900 text-white px-6 py-3 rounded-full text-lg font-medium transition"
               >
@@ -194,7 +194,7 @@ export default function FoodAppLandingPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 mt-6">
               <Link
-                href="https://food.it10x.com/"
+                href="/demo-link/#demo"
                 target="_blank"
                 className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-900 text-white px-6 py-3 rounded-full text-lg shadow-md transition"
               >
@@ -204,7 +204,7 @@ export default function FoodAppLandingPage() {
             </div>
             {/* <div className="flex flex-wrap gap-4 pt-6">
             <Link
-              href="https://food.it10x.com/"
+              href="/demo-link/#demo"
               target="_blank"
               className="inline-block bg-slate-800 hover:bg-slate-900 text-white px-6 py-3 rounded-full text-lg shadow-md transition"
             >
@@ -271,7 +271,7 @@ export default function FoodAppLandingPage() {
 
             <div className="flex flex-col   sm:flex-row gap-4 mt-6">
               <Link
-                href="https://food.it10x.com/"
+                href="/demo-link/#demo"
                 target="_blank"
                 className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-900 text-white px-6 py-3 rounded-full text-lg shadow-md transition"
               >
@@ -336,7 +336,7 @@ export default function FoodAppLandingPage() {
             {/* Buttons */}
                <div className="flex flex-col sm:flex-row gap-4 mt-6">
               <Link
-                href="https://food.it10x.com/"
+                href="/demo-link/#demo"
                 target="_blank"
                 className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-900 text-white px-6 py-3 rounded-full text-lg shadow-md transition"
               >
@@ -398,7 +398,7 @@ export default function FoodAppLandingPage() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mt-6">
               <Link
-                href="https://food.it10x.com/"
+                href="/demo-link/#demo"
                 target="_blank"
                 className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-900 text-white px-6 py-3 rounded-full text-lg shadow-md transition"
               >
@@ -449,7 +449,7 @@ export default function FoodAppLandingPage() {
               </li>
             </ul>
             <Link
-              href="https://food.it10x.com/"
+              href="/demo-link/#demo"
               target="_blank"
               className="inline-block bg-slate-800 hover:bg-slate-900 text-white px-6 py-3 rounded-full text-lg shadow-md transition"
             >
@@ -512,7 +512,7 @@ export default function FoodAppLandingPage() {
       {/* Buttons */}
       <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center md:justify-start">
         <Link
-          href="https://food.it10x.com/"
+          href="/demo-link/#demo"
           target="_blank"
           className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full text-lg font-medium transition"
         >
@@ -670,7 +670,7 @@ export default function FoodAppLandingPage() {
                   <li>User-friendly for all staff</li>
                 </ul>
                 <Link
-                  href="https://food.it10x.com/"
+                  href="/demo-link/#demo"
                   target="_blank"
                   className="inline-block bg-slate-800 hover:bg-slate-900 text-white px-4 py-2 rounded-full text-md shadow-md transition"
                 >
@@ -744,7 +744,7 @@ export default function FoodAppLandingPage() {
 
       <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center md:justify-start">
         <Link
-          href="https://food.it10x.com/"
+          href="/demo-link/#demo"
           target="_blank"
           className="inline-block bg-slate-800 hover:bg-slate-900 text-white px-6 py-3 rounded-full text-lg shadow-md transition"
         >
@@ -796,7 +796,7 @@ export default function FoodAppLandingPage() {
 
       <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center md:justify-start">
         <Link
-          href="https://food.it10x.com/"
+          href="/demo-link/#demo"
           target="_blank"
           className="inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full text-lg font-medium transition"
         >

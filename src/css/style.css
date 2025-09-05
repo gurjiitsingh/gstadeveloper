@@ -272,9 +272,9 @@
     padding-bottom: 2%;
     font-size: 50px !important;
     font-weight: bold;
-    color: #3c5858;
-    color: #555;
-    color: #0bd3b5;
+    /* color: #3c5858; */
+    color: #aaa;
+    /* color: #0bd3b5; */
   }
   
   h2 {

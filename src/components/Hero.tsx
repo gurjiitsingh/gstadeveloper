@@ -10,11 +10,12 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto gap-2 flex flex-col-reverse md:flex-row items-center justify-between ">
         {/* Text Content */}
         <div className="flex-1 text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
-            We Build <span className="text-blue-400">Powerful Web Apps</span>{" "}
+          <h1 className="text-slate-50 text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+            We Build <span className=" ">Powerful Web Apps</span>{" "}
             for Your Business
           </h1>
-          <p className="text-lg text-white mb-8 max-w-xl mx-auto md:mx-0">
+          {/* md:text-blue-400 */}
+          <p className="text-lg text-slate-50 mb-8 max-w-xl mx-auto md:mx-0">
             Gstadeveloper specializes in modern web solutions using Next.js,
             Tailwind, and the latest technologies to grow your online presence.
           </p>
