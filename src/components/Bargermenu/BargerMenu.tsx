@@ -6,7 +6,7 @@ import { IoClose } from "react-icons/io5";
 import { UseSiteContext } from '@/SiteContext/SiteContext';
 import { menuItems } from '@/confing/menuItems';
 import ContactButtonMini from '../ContactButtonMini';
-
+import type { Transition } from "framer-motion";
 
 export const BargerMenu = () => {
   const { openBargerMenu, bargerMenuToggle } = UseSiteContext();
@@ -98,9 +98,9 @@ const framerIcon = {
   initial: { scale: 0 },
   animate: { scale: 1 },
   transition: {
-    type: 'spring',
+    type: "spring",
     stiffness: 260,
     damping: 20,
     delay: 1.5,
-  },
+  } satisfies Transition,
 };

@@ -603,21 +603,21 @@
   
   }
   
-  .service-wrap:hover {
+  .service-wrap hover {
     color: white;
   }
   
-  .service-wrap:h3 {
-    color: white;
-  }
-  
-  
-  .service-wrap:hover h3 {
+  .service-wrap h3 {
     color: white;
   }
   
   
-  .service-wrap:hover h3:after {
+  .service-wrap hover h3 {
+    color: white;
+  }
+  
+  
+  .service-wrap:hover h3 after {
     background-color: white;
   }
   

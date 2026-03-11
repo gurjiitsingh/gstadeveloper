@@ -48,7 +48,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body >
+      <body suppressHydrationWarning>
         <SiteProvider>
         <BargerMenu />
         <div className="flex flex-col gap-0 my-0">
